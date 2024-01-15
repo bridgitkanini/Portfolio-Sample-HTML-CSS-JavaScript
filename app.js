@@ -12,6 +12,26 @@ function PageTransitions() {
             this.className += "active-btn" //this keyword.
         })
     }
+
+    //Sections active.
+    allSections.addEventListener("click", (e) => {
+        const id = e.target.dataset.id; //Load the dataset for icon selected.
+        if(id){
+            //Remove selected from the other btns.
+            sectionBtns.forEach((btn) => {
+                btn.classList.remove("active")
+            })
+            e.target.classList.add("active")
+
+            //Hide other sections.
+            sections.forEach((section) => {
+                section.classList.remove("active")
+            })
+
+            const element = document.getElementById(id);
+            element.classList.add("active");
+        }
+    })
 };
 
 PageTransitions();
