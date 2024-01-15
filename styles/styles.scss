@@ -56,31 +56,49 @@ section{
     transition: all .4s ease-in-out; //Can create a variable bc it appears a lot.
     background-color: var(--color-primary);
   }
-
+  
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: #2a2e35;
 }
 //Can give each section a different background color.
 
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: #27AE60;
 }
 
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: #6c7983;
 }
 
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: #dbe1e8;
 }
 
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: #12181b;
+}
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) sclae(0);
+        }
+        100%{
+            transform: translateY(0) sclae(1);
+        }
+    }
 }
 
 //Controls
