@@ -7,7 +7,7 @@
   
 :root{
     --color-primary: #191d2b;
-    --color-secondary: #27AE60;
+    --color-secondary: #6ba663;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -199,6 +199,10 @@ section{
 
 
 //Independent components
+.btn-container{
+    display: flex;
+    align-self: flex-start; //So button doesn't occupy the whole space.
+}
 .main-btn{
     border-radius: 30px;
     color: inherit;
@@ -214,12 +218,29 @@ section{
         padding: 0 2rem;
     }
     .btn-icon{
-        color: var(--color-secondary);
+        background-color: var(--color-secondary);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
         padding: 1rem;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%); //Not -100%, the color should fill from the icon, not towards it.
+        transition: var(--transition);
+        z-index: -1;
+    }
+    &:hover{
+        &::before{
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            transform: translateX(0); //Zero from 100% above to go back to original.
+        }
     }
 }
 
