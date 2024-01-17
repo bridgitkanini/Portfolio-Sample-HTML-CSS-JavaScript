@@ -9,7 +9,7 @@ function PageTransitions() {
         sectionBtn[i].addEventListener("click", function () { //"function" instead of arrow function "=>" because this keyword doesn't exist in "=>".
             let currentBtn = document.querySelectorAll(".active-btn");
             currentBtn[0].className = currentBtn[0].className.replace("active-btn", "");
-            this.className += "active-btn" //this keyword.
+            this.className += " active-btn" //this keyword.
         })
     }
 
