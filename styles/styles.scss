@@ -724,3 +724,5 @@ section{
     }
 }
 
+@import "./media"; //For media queries to work. Important. And only at the end bc the code is excecuted line by line. Media querries come in last.
+
