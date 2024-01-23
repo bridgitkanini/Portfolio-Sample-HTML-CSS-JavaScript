@@ -1,0 +1,9 @@
+
+@media screen and (max-width: 600px){ //Correct spacing otherwise it won't work.
+    header{
+        padding: 0;
+    }
+    header .right-header{
+        padding: 0;
+    }
+}
